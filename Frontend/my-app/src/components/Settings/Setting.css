@@ -1,0 +1,148 @@
+.settings-container {
+  max-width: 800px;
+  margin: 20px auto;
+  margin-top: 5rem;
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-white);
+}
+
+.settings-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--color-dark);
+}
+
+.settings-container h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--color-dark);
+}
+
+.settings-container label {
+  font-size: 1.6rem;
+  color: var(--color-dark);
+}
+
+.settings-container input,
+.settings-container textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.6rem;
+  border: 1px solid var(--color-gray);
+  border-radius: var(--border-radius);
+  margin-top: 0.5rem;
+  transition: border-color 0.3s ease;
+}
+
+.settings-container input:focus,
+.settings-container textarea:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+.settings-container button {
+  margin-top: 1rem;
+  padding: var(--btn-padding);
+  font-size: 1.6rem;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.settings-container button:hover {
+  background-color: hsl(var(--primary-color-hue), 75%, 50%);
+}
+
+.settings-container .btn-danger {
+  background-color: var(--color-danger);
+}
+
+.settings-container .btn-danger:hover {
+  background-color: hsl(0, 80%, 60%);
+}
+
+.settings-container .account-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.settings-container .account-actions button {
+  padding: var(--btn-padding);
+  font-size: 1.6rem;
+}
+
+.settings-container .account-actions button:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 480px) {
+  .settings-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .settings-container h3 {
+    font-size: 1.6rem;
+  }
+
+  .settings-container label {
+    font-size: 1.4rem;
+  }
+
+  .settings-container input,
+  .settings-container textarea {
+    font-size: 1.4rem;
+    padding: 0.8rem;
+  }
+
+  .settings-container button {
+    font-size: 1.4rem;
+    padding: 0.8rem 1.6rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .settings-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .settings-container h3 {
+    font-size: 1.6rem;
+  }
+
+  .settings-container label {
+    font-size: 1.4rem;
+  }
+
+  .settings-container input,
+  .settings-container textarea {
+    font-size: 1.4rem;
+    padding: 0.8rem;
+  }
+
+  .settings-container button {
+    font-size: 1.4rem;
+    padding: 0.8rem 1.6rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .settings-container {
+    max-width: 95%;
+    margin: 10px auto;
+    margin-top: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .settings-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    margin-top: 5rem;
+  }
+}

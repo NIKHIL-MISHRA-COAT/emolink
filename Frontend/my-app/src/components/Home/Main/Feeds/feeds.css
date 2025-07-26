@@ -1,0 +1,297 @@
+
+  .feeds .feed {
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    margin: 1rem 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    
+    /* max-height: 60vh; */
+}
+.feeds .feed:nth-child(n){
+ margin-bottom: 0;
+}
+
+  .feeds .interaction-buttons i.liked {
+    color: red;
+  }
+
+  .feeds .bookmarks i.Bookmarked{
+    color: red;
+  }
+
+  .feed .head{
+    display: flex;
+    justify-content: space-between;
+}
+
+  .feed .user{
+    display: flex;
+    gap: 1rem;
+}
+
+  .feed .photo{
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+    margin: 0.7rem 0;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    background:  rgb(7, 7, 7, 0.5);
+    /* padding: 1vh; */
+    /* background: radial-gradient(); */
+}
+.feed .photo img{
+    
+    height: 100%;
+    width: auto;
+    justify-content: center;
+}
+
+  .feed .action-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    margin: 0.6rem;
+}
+
+  .liked-by{
+    display: flex;
+}
+
+  .liked-by span{
+    width: 1.4rem;
+    height: 1.4rem;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--color-white);
+    margin-left: -0.6rem;
+}
+
+  .liked-by span:first-child{
+    margin: 0;
+}
+
+  .liked-by p{
+    margin-left: 0.5rem;
+}
+
+
+
+/* feed pop up */
+/* 
+305 main ke right ko sticky position se hatanaa hai i.e position hi mat dal
+main container ka z 1 kar 
+*/
+
+
+.comment .pop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: linear-gradient(transparent,rgba(78, 66, 66, 0.75));
+   z-index: 10000;
+}
+
+
+.comment   .pop-container {
+ 
+  /* padding: 0.4rem 0.8rem; */
+  /* border-radius: 1.5vw; */
+  position: absolute;
+  height: 70vh;
+  width: 80vw;
+  bottom: 5vh;
+ 
+}
+.comment .pop .pop-container .close {
+  position: absolute;
+  top: 1vh;
+  right: 1vw;
+  /* margin-top: 2vh;
+  margin-right: 0.5vw; */
+  /* margin-left: 4vw; */
+  font-size:1.5rem;   
+  color: #0e0d0d;
+  cursor: pointer;
+  z-index: 1;
+}
+.comment .pop .pop-container .pop-content{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  column-gap: 2%;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  border-radius: 15px 15px;
+  filter: drop-shadow(2px 4px 6px black);
+}
+.comment .pop .pop-container .pop-content .content{
+  display: flex;
+  object-fit: cover;
+  align-items: center;
+}
+
+.comment .pop .pop-container .pop-content .comment-bar{
+  display: flex;
+  flex-direction: column;
+  padding: auto;
+  /* margin: 0.3rem; */
+  box-shadow: 0 0 10px var(--color-primary);
+  border: #0e0d0d;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+}
+.comment .pop .pop-container .pop-content .comment-bar .user{
+  display: grid;
+  grid-template-columns: 10% 90%;
+  column-gap: 0;
+  margin:0.1rem ;
+  
+  font-size: 1.7rem;
+  /* border-bottom: 1px solid white; */
+  max-height : 7vh;
+}
+.comment .pop .pop-container .pop-content .comment-bar .user .profile-photo{
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  object-fit: cover;
+  /* position: relative; */
+  border: 2px solid  rgb(32, 7, 192);;
+  /* left: 20px;
+  top: 100px; */
+  /* border: 4px solid #ffffff; */
+  margin: auto;
+  padding: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0;
+}
+.comment .pop .pop-container .pop-content .comment-bar .hr{
+  /* color:rgb(140, 123, 123); */
+  width: 100%;
+  align-items: center;
+  border: 2px solid white;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.comment .pop .pop-container .pop-content .comment-bar .user .user-name{
+  color: #1b0d0d;
+  display: flex;
+  /* justify-content: ; */
+  align-items: center;
+  font-weight: 400;
+  
+  padding-bottom: 0;
+}
+
+.comments .comment-x {
+  font-size: 0.7rem;
+  padding-left: 5%;
+  /* overflow-y: scroll; */
+}
+
+.comments .comment-x .user .user-name{
+  font-size: 0.9rem;
+}
+.comments .comment-x .user .user-profile-photo{
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid  rgb(32, 7, 192);;
+  margin: auto;
+  padding: 1.4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0;
+  /* background-color: #0e0d0d; */
+}
+.comments .comment-x .user .user-profile-photo img{
+  object-fit: cover;
+}
+.comments .comment-x .comment-content{
+  padding-left: 12%;
+  margin-bottom: 2vh;
+  margin-top: -1vh;
+}
+.comment-bar .Write-comment{
+  bottom: 0;
+  position: absolute;
+  width: 47.5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 1vh;
+  padding-right: 1vh;
+  filter: drop-shadow(2px 4px 6px black);
+  position: absolute;
+  left: 1rem;
+
+}
+
+.comment-bar .Write-comment .input{
+  width: 85%;
+  display: flex;
+  border-radius:10px 0 0 10px ;
+  padding: 0 0.2rem;
+
+}
+.comment-bar .Write-comment .btn{
+ font-size: 0.7rem;
+ right: 0;
+ width: 15%;
+ border-radius: 0 10px 10px 0;
+
+
+}
+
+/* For 1024px and larger */
+@media screen and (max-width: 426px) {
+  .comment-bar .Write-comment{
+    width: 100%;
+    position: fixed;
+    left: auto;
+  }
+  .comment .pop .pop-container .pop-content .comment-bar{
+    position: absolute;
+    /* height: 68vh; */
+    top: 12rem;
+    bottom: -1rem;
+    width: 100%;
+    background: white;
+  }
+  .content{
+    position: fixed;
+  }
+}
+
+/* For 375px */
+@media screen and (max-width: 376px){
+  .comment .pop .pop-container .pop-content .comment-bar{
+    top: 11rem;
+  }
+}
+
+/* For 320px */
+@media screen and (max-width: 320px){
+  .comment .pop .pop-container .pop-content .comment-bar{
+    top: 9rem;
+  }
+}

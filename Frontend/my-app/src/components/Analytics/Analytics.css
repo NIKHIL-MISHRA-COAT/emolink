@@ -1,0 +1,211 @@
+/* body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-secondary);
+  font-family: 'Montserrat', sans-serif;
+} */
+
+/* .analytics-icon {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 20px;
+} */
+/* .icon_header {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 26px;
+} */
+/* .icon, .icon_header {
+  margin-right: 5px;
+} */
+
+/* .close_icon {
+  color: red;
+  margin-left: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+} */
+
+.analytics-grid-container {
+  display: grid;
+  grid-template-columns: 260px auto;
+  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas:
+    '.sidebar .header '
+    '.sidebar .main-container';
+  height: 100vh;
+}
+
+
+/* .analytics-sidebar{
+  position: sticky;
+  top: var(--sticky-top-left);
+  height: 100%;
+  border-radius: 25px;
+  background: linear-gradient(10deg, #3498db, #2ecc71);
+} */
+
+/* Main  */  
+.analytics-main-container {
+  grid-area: main;
+  overflow-y: auto;
+  padding: 0.5rem 2rem;
+  color: rgba(255, 255, 255, 0.95);
+  overflow: hidden;
+}
+
+.main-title {
+  display: flex;
+  justify-content: space-between;
+}
+.analytics-grid-container main {
+  top: 0;
+}
+.main-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 15px 0;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.cards:first-child {
+  background-color: #12de60;
+}
+
+.cards:nth-child(2) {
+  background-color: #f87918;
+}
+
+.cards:nth-child(3) {
+  background-color: #8421b6;
+}
+
+.cards:nth-child(4) {
+  background-color: #cd8484;
+}
+
+.cards-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-inner > .card_icon {
+  font-size: 25px;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 60px;
+  height: 300px;
+}
+
+/* End Main  */
+
+
+/* Medium <= 992px */
+  
+@media screen and (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      'header'
+      'main';
+  }
+
+  #sidebar {
+    display: none;
+  }
+
+  .menu-icon {
+    display: inline;
+  }
+
+  .sidebar-title > span {
+    display: inline;
+  }
+}
+/* Small <= 768px */
+  
+@media screen and (max-width: 768px) {
+  .main-cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .charts {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+}
+
+/* Extra Small <= 576px */
+
+@media screen and (max-width: 576px) {
+  .hedaer-left {
+    display: none;
+  }
+}
+
+
+/* Add this CSS for the popup */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+}
+
+.popup-inner {
+  text-align: center;
+}
+
+.popup button {
+  background: #ff5555;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.emopoints-container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.emopoints-input {
+  width: 100px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.emopoints-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}

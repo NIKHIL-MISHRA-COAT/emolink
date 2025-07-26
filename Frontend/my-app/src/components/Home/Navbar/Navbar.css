@@ -1,0 +1,254 @@
+/* General styles */
+nav {
+  width: 100%;
+  background: var(--color-white);
+  padding: 0.7rem 0;
+  /* Adjusted padding for better responsiveness */
+  position: fixed;
+  display: flex;
+  top: 0;
+  z-index: 10;
+}
+
+nav .container {
+  align-items: center;
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 15% 65% 5%;
+  column-gap: 2.5%;
+  width: 96%;
+}
+
+nav .container .icon {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-conatiner-icon-image {
+  width: 90%;
+  height: 90%;
+}
+
+nav .Searchbar {
+  background: var(--color-light);
+  border-radius: var(--border-radius);
+  padding: 1px;
+  display: flex;
+  flex-direction: row;
+  position: relative; /* Added position relative for absolute positioning */
+}
+
+nav .Searchbar input[type="text"] {
+  background: transparent;
+  font-size: 0.9rem;
+  color: var(--color-dark);
+  width: 90%;
+}
+
+.btn-search {
+  padding: 10px 7px;
+}
+
+.search-input {
+  margin: 10px;
+  background: transparent;
+}
+
+/* Profile options styles */
+nav .container .create {
+  border-radius: 50%;
+  left: 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+nav .container .create .profile-photo {
+  position: relative;
+  cursor: pointer;
+  overflow: visible;
+  border: solid 2px var(--color-primary);
+}
+
+.profile-photo img {
+  border-radius: inherit;
+}
+
+nav .container .create .profile-photo:hover .profile-options {
+  display: block;
+  padding: 2px 2px;
+  margin: 3px 3px;
+}
+
+nav .container .create .profile-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 67%);
+  border-radius: 5px;
+  padding: 2px;
+  z-index: 10;
+  color: #333;
+}
+
+nav .container .create .profile-options .username {
+  font-weight: bold;
+  font-size: xx-small;
+  color: #333;
+  padding: 2px 6px;
+}
+
+nav .container .create .profile-options .btn-logout {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 2px 1rem;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+/* Search suggestions styles */
+.search-suggestions {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  max-height: 150px; /* Adjusted max-height for smaller size */
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.search-suggestions ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-suggestions li {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-suggestions li:hover {
+  background-color: #f0f0f0;
+}
+
+.search-suggestions.show {
+  display: block;
+}
+
+
+
+
+
+
+/* Responsive Styles */
+@media screen and (max-width: 950px) {
+  nav .container {
+    
+    grid-template-columns: 20% 68% 10%;
+    column-gap: 1%;
+    width: 99%;
+
+  }
+  nav .container .create .profile-photo{
+    width:3rem
+    
+  }
+}
+@media screen and (max-width: 350px) {
+  
+}
+/* For 1440px and larger */
+/* @media screen and (max-width: 1440px) and (min-width : 750px) {
+  .btn-search{
+    position: absolute;
+    padding: 10px;
+  }
+} */
+
+/* For 1024px and larger */
+/* @media screen and (max-width: 1024px) {
+  .btn-search{
+    position: absolute;
+    left: 61rem;
+    padding: 10px;
+  }
+} */
+
+/* For 768px */
+/* @media screen and (max-width: 768px) {
+  nav .Searchbar input[type="search"] {
+    font-size: 0.8rem;
+  }
+  .btn-search{
+    left: 38.5rem;
+    }
+    nav .Searchbar{
+      max-width: 425px;
+        }
+  nav .Searchbar {
+    margin-left: 0;
+  }
+} */
+
+/* For 425px */
+/* @media screen and (max-width: 426px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav .Searchbar {
+    margin-right: 8px;
+    max-width: 155px;
+    margin-left: 0;
+}
+  .search-input {
+    width: 135px;
+  }
+  .btn-search {
+    left: 19rem;
+  }
+} */
+
+/* For 375px */
+/* @media screen and (max-width: 376px) {
+  nav .Searchbar input[type="search"] {
+    font-size: 0.7rem;
+  }
+  .btn-search {
+    left: 15rem;
+}
+.icon{
+  height: 3vh;
+    width: 5rem;
+}
+} */
+
+/* For 320px */
+/* @media screen and (max-width: 320px) {
+  nav .container {
+    padding: 0 0.5rem;
+  }
+  .search-input{
+    width: 90px;
+  }
+  .btn-search {
+    left: 12.1rem;
+}
+nav .Searchbar{
+  margin: 0px 15px 0px 8px;
+}
+} */

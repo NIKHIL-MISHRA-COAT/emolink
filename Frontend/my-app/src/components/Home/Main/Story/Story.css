@@ -1,0 +1,205 @@
+.story-container {
+  display: grid;
+  grid-template-columns: 18vw auto 20vw;
+  column-gap: 2rem;
+  overflow: hidden;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 10000;
+  /* Position the close button */
+  padding-top: 2vh; 
+  padding-right: 2vw;
+}
+
+.story-container .close-btn {
+  position: absolute;
+  top: 1vh;
+  right: 1vw;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem; 
+  font-size: 1.5rem; 
+  color: white; 
+}
+
+.story-container .close-btn:hover {
+  color: red; 
+}
+
+.story-container .image-cont {
+  display: flex;
+  flex-direction: column; /* Display username below the image */
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.story-container .image-cont .image1 {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+  object-fit: cover;
+}
+
+.story-container .image-cont .username {
+  font-style: italic;
+  font-size: 14px; /* Adjust the font size as needed */
+  color: red; /* Adjust the color as needed */
+  margin-top: 10px; /* Add margin for spacing */
+}
+
+.navi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.story-container .navi .btn {
+  border-radius: var(--border-radius);
+  display: inline-block;
+  font-weight: 500;
+  transition: all 300ms ease;
+  font-size: 0.9rem;
+  padding: var(--btn-padding);
+  background-color: #e4e8ed;
+  border: 2px solid;
+  color: #0d0d0d;
+  cursor: pointer;
+}
+
+
+
+.create-story-form .create-story .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+
+}
+
+.create-story-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 3vw;
+  padding: 2vh 0;
+}
+
+.container-create-story .close-btn {
+  position: absolute;
+  top: 1vh;
+  right: 1vw;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem; 
+  font-size: 1.5rem; 
+  color: red; 
+}
+
+.container-create-story .close-btn:hover {
+  color: white; 
+}
+
+
+.container-create-story {
+  position: relative;
+  margin-top: 7rem;
+  padding: auto;
+  overflow: hidden;
+  background: blur(0.1px);
+  background-color: rgba(0, 0, 0, 0.3); /*Adjust the alpha value for darkness*/
+  border: 1vh dashed black;
+}
+
+.custom-file-input {
+  display: inline-block;
+  padding: 1vh 1vw;
+  cursor: pointer;
+  margin-right: 1rem;
+  background-color: #3498db;
+  color: #fff;
+  border: 1px solid #2980b9;
+  border-radius: 5px;
+  
+}
+
+.file-input {
+  display: none;
+}
+
+.story-grid {
+  display: flex;
+  column-gap: 2rem;
+  position: relative;
+  margin: 2vh 2vw 1vh 2vw;
+  overflow-x: auto; 
+  white-space: nowrap; 
+}
+
+.story-item{
+  margin-bottom: 2vh;
+}
+.story-content{
+ max-width : 60vw;
+ min-width: 20vw;
+ max-height : 50vh;
+ min-height: 20vh;
+}
+
+.remove-icon{
+  display: inline-block;
+  width: 2vw;
+  height: auto;
+}
+
+@media  screen and (min-width:451px) {
+.story-container::-webkit-scrollbar {
+  width: 12px;
+}
+
+.story-container::-webkit-scrollbar-thumb {
+  border-radius: 0.7rem;
+  /* border: 2px solid white; */
+  background-color: rgba(63, 61, 61, 0.5);
+}
+}
+
+@media  screen and (max-width:450px) {
+  .story-content{
+    max-width : 75vw;
+    min-width: 60vw;
+    max-height : 70vh;
+    min-height: auto;
+    margin-bottom: 2vh;
+   }
+
+   .create-story-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 3vw;
+    padding: 2vh 0;
+  }
+
+  .story-grid {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    margin: 2vh 2vw 1vh 2vw;
+    overflow-y: auto; 
+    white-space: nowrap; 
+  }
+}
+
