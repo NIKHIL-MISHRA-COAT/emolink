@@ -4,7 +4,7 @@ A full-stack real-time social media platform that empowers users to share their 
 
 ## 📽️ Demo Video
 
-▶️ [Watch Demo on YouTube](https://drive.google.com/file/d/1UvpjvEXPdXWl94mdMhftJ2DNLWAYV2hA/view?usp=sharing)  
+▶️ [ Demo ](https://drive.google.com/file/d/1UvpjvEXPdXWl94mdMhftJ2DNLWAYV2hA/view?usp=sharing)  
 
 ## 🚀 Features
 
